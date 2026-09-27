@@ -1,0 +1,17 @@
+Create status ennum field in the table to be applied workflow with the elements:
+        Draft ,Submitted, InReview, Approved, Rejeccted, ChangeRequest 
+Create new Query and the table that the workflow be applied to in the datasource > and set dynamic fields to Yes.
+Create field group the workflow table containing the status field and id and name(optional)
+create workflow category and set the module
+Create workflow type and set:
+    The label to be shown in the workflow configuration.
+    Document menuitem will the MI to apply the Workflow 
+Create Workflow Approval
+Create extension to the WF form and change the properties:
+    Workflow Datasource >> the WF table (create new datasource if not exist and filter it)
+    Workflow Enabeled   >> Yes
+    WorkflowType        >> wf type
+Add method updateWorkflowStatus() in the WF table extension class (see the projects).
+In WorkflowTypeSubmitManager class main method will contain the wf run code (see the projects)
+In WorkflowTypeEventHandler class, update the WF status in each WF event.
+In WorkflowApprovalEventHandler class, update the WF status in approved and rejected.
