@@ -7,6 +7,7 @@ Create workflow type and set:
     The label to be shown in the workflow configuration.
     Document menuitem will the MI to apply the Workflow 
 Create Workflow Approval
+Add the Workflow approval in Supported Elements node of Workflow Type (name and element will be the same).
 Create extension to the WF form and change the properties:
     Workflow Datasource >> the WF table (create new datasource if not exist and filter it)
     Workflow Enabeled   >> Yes
